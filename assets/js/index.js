@@ -2,7 +2,7 @@
 let card = document.querySelector("#card");
 let generateCat = document.getElementById("generate_cat");
 let url = "https://api.thecatapi.com/v1/images/search";
-const music = document.querySelector("audio");
+const music = document.querySelector("#audio");
 
 let data = async () => (await fetch(url)).json();
 
