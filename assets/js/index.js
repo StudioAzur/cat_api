@@ -2,18 +2,13 @@
 let card = document.querySelector("#card");
 let generateCat = document.getElementById("generate_cat");
 let url = "https://api.thecatapi.com/v1/images/search";
-const music = new Audio("../assets/sons/miaou.mp3");
+const music = document.querySelector("audio");
 
 let data = async () => (await fetch(url)).json();
 
-
-const playSound = () =>{
-  music.play();
-}
-
 // Fonction qui permet de générer une image de chat différent récupéré avec fetch
 const getRandomCat = () => {
-  playSound(music);
+  music.play();
   if(card.firstChild){
     card.removeChild(card.childNodes[0]);
   }
